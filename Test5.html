@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+		<title>Test5</title>
+	</head>
+
+	<body>
+		<script>
+			var Arraycolor = new Array("yellow","olive", "teal", "red", "blue", "maroon","purple", "navy", "lime", "fuschia", "green",  "gray",  "aqua", "white", "silver");
+			var n = 0;
+
+			function turncolors() {
+				if(n == (Arraycolor.length - 1)) n = 0;
+				n++;
+				document.bgColor = Arraycolor[n];
+			}
+		</script>
+		<form name="form1" method="post" action="">
+			<p>
+				<input type="button" name="Submit" value="change color" onclick="turncolors()">
+			</p>
+		</form>
+	</body>
+
+</html>

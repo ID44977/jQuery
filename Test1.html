@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Test1</title>
+	</head>
+
+	<body>
+		<table border="1">
+			<tr>
+				<td onmouseover="overShow1()" onmouseout="outHide1()"><img src="img/UK.jpeg"  alt="UK" /></td>
+				<td onmouseover="overShow2()" onmouseout="outHide2()"><img src="img/USA.jpg"  alt="USA" /></td>
+				<td onmouseover="overShow3()" onmouseout="outHide3()"><img src="img/Canada.jpg"  alt="Cananda" /></td>
+			</tr>
+		</table>
+		<div id="showDiv1" style="position: absolute; left: 95px; background-color: white; border: 1px solid black; font-size: 18px;"></div>
+		<div id="showDiv2" style="position: absolute; left: 295px; background-color: white; border: 1px solid black; font-size: 18px;"></div>
+		<div id="showDiv3" style="position: absolute; left: 495px; background-color: white; border: 1px solid black; font-size: 18px;"></div>
+	</body>
+
+	<script>
+		function overShow1() {
+			var showDiv = document.getElementById('showDiv1');
+			showDiv.style.left = event.clientX;
+			showDiv.style.top = event.clientY;
+			showDiv.style.display = 'block';
+			showDiv.innerHTML = 'UK';
+		}
+		function overShow2() {
+			var showDiv = document.getElementById('showDiv2');
+			showDiv.style.left = event.clientX;
+			showDiv.style.top = event.clientY;
+			showDiv.style.display = 'block';
+			showDiv.innerHTML = 'USA';
+		}
+		function overShow3() {
+			var showDiv = document.getElementById('showDiv3');
+			showDiv.style.left = event.clientX;
+			showDiv.style.top = event.clientY;
+			showDiv.style.display = 'block';
+			showDiv.innerHTML = 'Canada';
+		}
+
+		function outHide1() {
+			var showDiv = document.getElementById('showDiv1');
+			showDiv.style.display = 'none';
+			showDiv.innerHTML = '';
+		}
+		function outHide2() {
+			var showDiv = document.getElementById('showDiv2');
+			showDiv.style.display = 'none';
+			showDiv.innerHTML = '';
+		}
+		function outHide3() {
+			var showDiv = document.getElementById('showDiv3');
+			showDiv.style.display = 'none';
+			showDiv.innerHTML = '';
+		}
+	</script>
+
+</html>
